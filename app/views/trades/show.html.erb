@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Trade:</strong>
   <%= @trade.name %>
 </p>
+
+<p>
+  <strong>Listed Jobs:</strong>
+  <ul><% @trade.jobs.each do |job| %></ul>
+  	<li><%= job.name %></li>
+  <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_trade_path(@trade) %> |
 <%= link_to 'Back', trades_path %>
