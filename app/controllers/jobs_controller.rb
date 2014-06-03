@@ -40,8 +40,10 @@ class JobsController < ApplicationController
   # PATCH/PUT /jobs/1
   # PATCH/PUT /jobs/1.json
   def update
+    @job = Job.find(params[:id])
+
     respond_to do |format|
-      if @job.update(job_params)
+      if @job.update_attributes(params[:job])
         format.html { redirect_to @job, notice: 'Job was successfully updated.' }
         format.json { render :show, status: :ok, location: @job }
       else

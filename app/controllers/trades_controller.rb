@@ -40,8 +40,10 @@ class TradesController < ApplicationController
   # PATCH/PUT /trades/1
   # PATCH/PUT /trades/1.json
   def update
+    @trade = Trade.find(params[:id])
+
     respond_to do |format|
-      if @trade.update(trade_params)
+      if @trade.update_attributes(params[:trade])
         format.html { redirect_to @trade, notice: 'Trade was successfully updated.' }
         format.json { render :show, status: :ok, location: @trade }
       else
