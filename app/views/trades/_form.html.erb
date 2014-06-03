@@ -16,6 +16,10 @@
     <%= f.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= f.association :jobs, as: :check_boxes, label: 'Jobs:'%>  <br>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

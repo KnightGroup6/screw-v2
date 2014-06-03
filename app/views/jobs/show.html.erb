@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-
-<p>
-  <strong>Trade:</strong>
-  <% @job.trades.each do |trade| %>
-    <%= trade.name %>
-  <% end %>
-</p>
-
 <p>
   <strong>Job:</strong>
   <%= @job.name %>
 </p>
+
+<p>
+  <strong>Listed Trade:</strong>
+  <ul><% @job.trades.each do |trade| %></ul>
+    <li><%= trade.name %></li>
+  <% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
