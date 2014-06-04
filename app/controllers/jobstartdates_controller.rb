@@ -41,7 +41,7 @@ class JobstartdatesController < ApplicationController
   # PATCH/PUT /jobstartdates/1.json
   def update
     respond_to do |format|
-      if @jobstartdate.update(jobstartdate_params)
+      if @jobstartdate.update_attributes(params[:jobstartdate])
         format.html { redirect_to @jobstartdate, notice: 'Jobstartdate was successfully updated.' }
         format.json { render :show, status: :ok, location: @jobstartdate }
       else
