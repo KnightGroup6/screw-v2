@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :jobstartdates
+
   resources :budgets
 
   resources :applications
