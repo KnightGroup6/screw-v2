@@ -13,8 +13,17 @@
 
   <h2>Job Details</h2>
   <div class="field">
+    <%= f.label :question, label: 'What is the appropriate status for this job?' %><br>
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <%= f.label :question, label: 'Are you the owner or authorised to make property changes?' %><br>
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
     <%= f.association :jobstartdate, label: 'When do you want the job to start?:',  prompt: "-- select timing --"%></br>
   </div>
+
 
   <h2>Budget</h2>
   <div class="field">
