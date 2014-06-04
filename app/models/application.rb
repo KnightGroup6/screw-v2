@@ -4,6 +4,8 @@ class Application < ActiveRecord::Base
 	belongs_to :job
 	belongs_to :trade
 
+	has_one :budget
+
 	validates :firstname, presence: true
 	validates :lastname, presence: true
 	validates :phone, presence: true

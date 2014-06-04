@@ -40,8 +40,10 @@ class BudgetsController < ApplicationController
   # PATCH/PUT /budgets/1
   # PATCH/PUT /budgets/1.json
   def update
+    @budget = Budget.find(params[:id])
+
     respond_to do |format|
-      if @budget.update(budget_params)
+      if @budget.update_attributes(params[:budget])
         format.html { redirect_to @budget, notice: 'Budget was successfully updated.' }
         format.json { render :show, status: :ok, location: @budget }
       else
