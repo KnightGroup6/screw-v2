@@ -4,6 +4,9 @@ class Trade < ActiveRecord::Base
 	has_many :jobs_trades
   	has_many :jobs, through: :jobs_trades
 
+  	has_many :applications
+  	has_many :jobs, through: :applications
+
   	validates :name, presence: true
   	validates :name, uniqueness: true
 end
