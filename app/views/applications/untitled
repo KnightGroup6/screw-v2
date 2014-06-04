@@ -11,10 +11,9 @@
     </div>
   <% end %>
 
-  <%= render 'jdBathroomDesign' %>
-
-  <%= render 'budget' %>
-
-  <%= render 'contact' %>
+  <h2>Budget</h2>
+  <div class="field">
+    <%= f.association :budget, label: 'Budget:',  prompt: "-- select approx. budget --"%></br>
+  </div>
 
 <% end %>
