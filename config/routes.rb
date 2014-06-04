@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :applications
+
   get 'home/index'
 
   resources :trades
