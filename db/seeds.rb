@@ -117,16 +117,43 @@ j64 = Job.create!(name:'Stone / Concrete Paving')
 
 Trade.delete_all
 t1 = Trade.create!(name:'Aerial / Network Specialist')
-t1.jobs << j1
+t1.jobs << j1 << j2 << j3 << j4 << j5 << j6
+
 t2 = Trade.create!(name:'Bathroom Specialist')
+t2.jobs << j7 << j8 << j9 << j10
+
 t3 = Trade.create!(name:'Bricklayer')
+t3.jobs << j11 << j12 << j13 << j14
+
 t4 = Trade.create!(name:'Builder')
+t4.jobs << j15 << j16 << j17 << j18 << j19 << j20 << j21 << j22 << j23 << j24 << j12 << j25 << j26
+
 t5 = Trade.create!(name:'Carpenter / Joiner')
+t5.jobs << j22 << j27 << j28 << j29 << j30 << j31 << j32 << j33 << j34 << j35 << j36 << j37 << j24 << j38 << j39 << j40 << j41 << j42
+
 t6 = Trade.create!(name:'Cleaner')
+t6.jobs << j43 << j44 << j45 
+
 t7 = Trade.create!(name:'Drinage Specialist')
+t7.jobs << j46 << j47
+
 t8 = Trade.create!(name:'Driveway Services')
+t8.jobs << j48
+
 t9 = Trade.create!(name:'Electrician')
+t9.jobs << j49 << j50 << j51 << j52 << j6 << j53 << j54
+
 t10 = Trade.create!(name:'Flooring Specialist')
+t10.jobs << j52 << j55 << j29 << j56 << j57 << j58 << j59 << j60 << j31 << j61 << j62 << j63 << j64 << j36
+
+
+
+
+
+
+
+
+
 
 
 
