@@ -7,8 +7,8 @@ class Application < ActiveRecord::Base
 	belongs_to :budget
 	belongs_to :jobstartdate
 
-	validates :firstname, presence: true
-	validates :lastname, presence: true
-	validates :phone, presence: true
-	validates :email, presence: true
+	# validates :firstname, presence: true
+	# validates :lastname, presence: true
+	# validates :phone, presence: true
+	# validates :email, presence: true
 end

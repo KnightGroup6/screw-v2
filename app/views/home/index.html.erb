@@ -2,7 +2,7 @@
 <p>Find me in app/views/home/index.html.erb</p>
 <h1>We have thousands of recommended tradesmen across the UK</h1>
 
-<%= simple_form_for Application.new, url: '/jobs/show', :method => :get  do |f| %>
+<%= simple_form_for Application.new, url: '/applications/new', :method => :get  do |f| %>
   <div class="field">
     <%= f.collection_select :trade_id, Trade.order(:name), :id, :name, include_blank: true %>
   </div>
