@@ -5,4 +5,12 @@
 
 jQuery ->
 	jobs = $('#application_job_id').html()
-	console.log(jobs)
+	$('#application_trade_id').change ->
+		trade = $('#application_trade_id :selected').text()
+		options = $(jobs).filter("optgroup[label='#{trade}']").html()
+		if options
+			$('#application_job_id').html(options)
+		else
+			$('#application_job_id').empty()
+
+	
