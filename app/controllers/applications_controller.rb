@@ -10,6 +10,7 @@ class ApplicationsController < ApplicationController
   # GET /applications/1
   # GET /applications/1.json
   def show
+     @application = Application.find(params[:id])
   end
 
   # GET /applications/new
@@ -17,31 +18,27 @@ class ApplicationsController < ApplicationController
     @application = Application.new
   end
 
-  # GET /applications/1/edit
-  def edit
-  end
-
   # POST /applications
   # POST /applications.json
   def create
-    @application = Application.new(application_params)
+    @application = Application.new(params[:application]) 
+    @application.current_step = session[:application_step]
+    @application.next_step
+    session[:application_step] = @application.current_step
+    render :new
+  end
 
-    respond_to do |format|
-      if @application.save
-        format.html { redirect_to @application, notice: 'Application was successfully created.' }
-        format.json { render :show, status: :created, location: @application }
-      else
-        format.html { render :new }
-        format.json { render json: @application.errors, status: :unprocessable_entity }
-      end
-    end
+  # GET /applications/1/edit
+  def edit
   end
 
   # PATCH/PUT /applications/1
   # PATCH/PUT /applications/1.json
   def update
+    @application = Application.find(params[:id])
+
     respond_to do |format|
-      if @application.update(application_params)
+      if @application.update_attributes(params[:application])
         format.html { redirect_to @application, notice: 'Application was successfully updated.' }
         format.json { render :show, status: :ok, location: @application }
       else

@@ -1,5 +1,6 @@
 class Application < ActiveRecord::Base
 	attr_accessible :firstname, :lastname, :phone, :email, :question, :postcode, :description, :job_id, :trade_id, :budget_id, :jobstartdate_id
+	attr_writer :current_step
 
 	belongs_to :job
 	belongs_to :trade
@@ -11,4 +12,17 @@ class Application < ActiveRecord::Base
 	# validates :lastname, presence: true
 	# validates :phone, presence: true
 	# validates :email, presence: true
+
+	def current_step
+		@current_step || steps.first	
+	end
+
+	def steps
+		%w[ digitalHomeNetwork budget contact ]
+		#need to write a method stating if user selects spcific trade_id & job_id display _partial_form as the step.first relating to the selected ids	
+	end
+
+	def next_step
+		self.current_step = steps[steps.index(current_step)+1]	
+	end
 end

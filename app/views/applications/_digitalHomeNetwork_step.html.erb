@@ -1,0 +1,31 @@
+
+<h2>Job Details</h2>
+<h5>Job_id: 975: Digital Home Network</h5>
+<div class="field">
+  <%= f.label :question, label: 'What is the appropriate status for this job?' %><br>
+  <%= f.radio_button :question, ' I am ready to hire', :checked => true %><%= label :question, ' I am ready to hire' %></br>
+  <%= f.radio_button :question, :checked => true %><%= label :question, ' I am planning and budgeting' %></br>
+  <%= f.radio_button :question, :checked => true %><%= label :question, ' I need a quote for insurance' %></br>
+</div></br>
+
+<div class="field">
+  <%= f.label :question, label: 'Are you the owner or authorised to make property changes?' %><br>
+  <%= f.radio_button :question, :checked => true %><%= label :question, ' I own and live at this property' %></br>
+  <%= f.radio_button :question, :checked => true %><%= label :question, ' I am the landlord' %></br>
+  <%= f.radio_button :question, :checked => true %><%= label :question, ' I rent, but am authorised to make changes to this property' %></br>
+  <%= f.radio_button :question, :checked => true %><%= label :question, ' I am looking to bu this property' %></br>
+</div></br>
+
+<div class="field">
+  <%= f.association :jobstartdate, label: 'When do you want the job to start?:',  prompt: "-- select timing --"%></br>
+</div>
+
+<div class="field">
+  <%= f.label :postcode, label: 'What is the postcode for the job?' %><br>
+  <%= f.text_field :postcode %>
+</div></br>
+
+<div class="field">
+  <%= f.label :description, label: 'Describe your job:' %><br>
+  <%= f.text_area :description %>
+</div></br>

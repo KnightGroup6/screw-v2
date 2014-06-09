@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <%= render 'digital_home_network' %>
-  <%= render 'bathroomInstallation' %>
+  <%= render "#{@application.current_step}_step", :f => f %>
 
+  <div class="actions">
+    <%= f.submit "Next" %>
+  </div>
 
-  <%= render 'budget' %>
-
-  <%= render 'contact' %>
+  <p><%= link_to "Back to application list", applications_path %></p>
 
 <% end %>
