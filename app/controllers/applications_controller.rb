@@ -27,7 +27,7 @@ class ApplicationsController < ApplicationController
     @application.current_step = session[:application_step]
     if params[:previous_button]
       @application.previous_step
-    elsif @application.last_step? #need to correct this so function in application model can identify if its on the last step or not before saving application
+    elsif @application.last_step 
       @application.save
     else
       @application.next_step
