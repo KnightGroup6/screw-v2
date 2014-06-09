@@ -15,13 +15,15 @@ class ApplicationsController < ApplicationController
 
   # GET /applications/new
   def new
+    session[:application_params] ||= {}
     @application = Application.new
   end
 
   # POST /applications
   # POST /applications.json
   def create
-    @application = Application.new(params[:application]) 
+    session[:application_params].deep_merge!(params[:application]) if params[:application]
+    @application = Application.new(session[:application_params]) 
     @application.current_step = session[:application_step]
     if params[:previous_button]
       @application.previous_step
