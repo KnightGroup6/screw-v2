@@ -18,7 +18,7 @@ class Application < ActiveRecord::Base
 	end
 
 	def steps
-		%w[ digitalHomeNetwork budget contact ]
+		%w[ digitalHomeNetwork contact budget ]
 		#need to write a method stating if user selects spcific trade_id & job_id display _partial_form as the step.first relating to the selected ids	
 	end
 

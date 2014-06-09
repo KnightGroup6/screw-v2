@@ -40,6 +40,7 @@ class ApplicationsController < ApplicationController
       redirect_to @application
     end
   end
+  #TODO need to check controller, next button skipping steps due to line 30 related to function last_step
 
   # GET /applications/1/edit
   def edit
