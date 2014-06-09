@@ -29,4 +29,8 @@ class Application < ActiveRecord::Base
 	def previous_step
 		self.current_step = steps[steps.index(current_step)-1]	
 	end
+
+	def last_step
+		current_step = steps.last	
+	end
 end

@@ -27,11 +27,18 @@ class ApplicationsController < ApplicationController
     @application.current_step = session[:application_step]
     if params[:previous_button]
       @application.previous_step
+    elsif @application.last_step? #need to correct this so function in application model can identify if its on the last step or not before saving application
+      @application.save
     else
       @application.next_step
     end
     session[:application_step] = @application.current_step
-    render :new
+    if @application.new_record?
+      render :new
+    else
+      flash[:notice] = "Application saved"
+      redirect_to @application
+    end
   end
 
   # GET /applications/1/edit
