@@ -14,6 +14,10 @@
   <%= render "#{@application.current_step}_step", :f => f %>
 
   <div class="actions">
+    <%= f.submit "Back", :name => "previous_button" %>
+  </div>
+
+  <div class="actions">
     <%= f.submit "Next" %>
   </div>
 

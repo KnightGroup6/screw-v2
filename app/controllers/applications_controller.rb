@@ -23,7 +23,11 @@ class ApplicationsController < ApplicationController
   def create
     @application = Application.new(params[:application]) 
     @application.current_step = session[:application_step]
-    @application.next_step
+    if params[:previous_button]
+      @application.previous_step
+    else
+      @application.next_step
+    end
     session[:application_step] = @application.current_step
     render :new
   end
