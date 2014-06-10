@@ -33,10 +33,12 @@ class ApplicationsController < ApplicationController
     else
       @application.next_step
     end
+    
     session[:application_step] = @application.current_step
     if @application.new_record?
       render :new
     else
+      session[:application_step] = session[:application_params] = nil
       flash[:notice] = "Application saved"
       redirect_to @application
     end

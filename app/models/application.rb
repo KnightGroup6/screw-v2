@@ -12,6 +12,7 @@ class Application < ActiveRecord::Base
 	# validates :lastname, presence: true
 	# validates :phone, presence: true
 	# validates :email, presence: true
+	#TODO view 217 Multistep Forms Rails cast on validation settings
 
 	def current_step
 		@current_step || steps.first	
