@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @application.firstname %>
-</p>
 
+
+
+
+<h2>Client's Deatils</h2>
 <p>
-  <strong>Lastname:</strong>
-  <%= @application.lastname %>
+  <strong>Name:</strong>
+  <%= @application.firstname %> <%= @application.lastname %>
 </p>
 
 <p>
@@ -18,6 +18,40 @@
 <p>
   <strong>Email:</strong>
   <%= @application.email %>
+</p></br>
+
+<h2>Trade & Job</h2>
+<strong>Trade: </strong><p></p></br>
+<strong>Job: </strong><p></p></br>
+
+<h2>Client's Job Details</h2>
+
+<p>
+	<strong>Survey Answers</strong></br>
+	<ul>
+		<li><%= @application.question %></li>
+		<li><%= @application.questiona %></li>
+	</ul>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @application.jobstartdate.name %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @application.postcode %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @application.budget.name %>
+</p>
+
+<p>
+  <strong>Job Description:</strong>
+  <%= @application.description %>
 </p>
 
 <%= link_to 'Edit', edit_application_path(@application) %> |
