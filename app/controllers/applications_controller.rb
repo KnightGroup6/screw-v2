@@ -16,7 +16,8 @@ class ApplicationsController < ApplicationController
   # GET /applications/new
   def new
     session[:application_params] ||= {}
-    @application = Application.new
+    @application = Application.new(session[:application_params])
+    @application.current_step = session[:application_step]
   end
 
   # POST /applications
@@ -27,9 +28,8 @@ class ApplicationsController < ApplicationController
     @application.current_step = session[:application_step]
     if params[:previous_button]
       @application.previous_step
-    # elsif @application.last_step 
-    #   @application.save
-    #TODO The function last_step (related to next button in views & model) is skipping steps in between but creating application
+    elsif @application.last_step? 
+      @application.save
     else
       @application.next_step
     end
