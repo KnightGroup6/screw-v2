@@ -1,5 +1,5 @@
 class Application < ActiveRecord::Base
-	attr_accessible :firstname, :lastname, :phone, :email, :question, :postcode, :description, :job_id, :trade_id, :budget_id, :jobstartdate_id
+	attr_accessible :firstname, :lastname, :phone, :email, :question, :questiona, :questionb, :postcode, :description, :job_id, :trade_id, :budget_id, :jobstartdate_id
 	attr_writer :current_step
 
 	belongs_to :job
