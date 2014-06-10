@@ -18,8 +18,8 @@ class Application < ActiveRecord::Base
 	end
 
 	def steps
-		%w[ digitalHomeNetwork contact budget ]
-		#need to write a method stating if user selects spcific trade_id & job_id display _partial_form as the step.first relating to the selected ids	
+		%w[digitalHomeNetwork budget contact]
+		#TODO need to write a method stating if user selects spcific trade_id & job_id display _partial_form as the step.first relating to the selected ids	
 	end
 
 	def next_step
@@ -30,7 +30,11 @@ class Application < ActiveRecord::Base
 		self.current_step = steps[steps.index(current_step)-1]	
 	end
 
-	def last_step
+	def first_step?
+		current_step == steps.first	
+	end
+
+	def last_step?
 		current_step == steps.last	
 	end
 end

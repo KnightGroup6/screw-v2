@@ -27,8 +27,9 @@ class ApplicationsController < ApplicationController
     @application.current_step = session[:application_step]
     if params[:previous_button]
       @application.previous_step
-    elsif @application.last_step 
-      @application.save
+    # elsif @application.last_step 
+    #   @application.save
+    #TODO The function last_step (related to next button in views & model) is skipping steps in between but creating application
     else
       @application.next_step
     end
@@ -40,7 +41,7 @@ class ApplicationsController < ApplicationController
       redirect_to @application
     end
   end
-  #TODO need to check controller, next button skipping steps due to line 30 related to function last_step
+
 
   # GET /applications/1/edit
   def edit

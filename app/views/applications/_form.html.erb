@@ -14,7 +14,7 @@
   <%= render "#{@application.current_step}_step", :f => f %>
 
   <div class="actions">
-    <%= f.submit "Back", :name => "previous_button" %>
+    <%= f.submit "Back", :name => "previous_button" unless @application.first_step? %>
   </div>
 
   <div class="actions">
