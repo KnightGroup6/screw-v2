@@ -15,6 +15,7 @@ class ApplicationsController < ApplicationController
 
   # GET /applications/new
   def new
+    #TODO need to add coding here to accept trade_id & job_id
     session[:application_params] ||= {}
     @application = Application.new(session[:application_params])
     @application.current_step = session[:application_step]
@@ -33,7 +34,7 @@ class ApplicationsController < ApplicationController
     else
       @application.next_step
     end
-    
+
     session[:application_step] = @application.current_step
     if @application.new_record?
       render :new
