@@ -7,8 +7,8 @@ class Job < ActiveRecord::Base
 	has_many :applications
 	has_many :trades, through: :applications
 
-	validates :name, presence: true
-	validates :name, uniqueness: true
+	# validates :name, presence: true
+	# validates :name, uniqueness: true
 
-	validates :trades, presence: true
+	# validates :trades, presence: true
 end
