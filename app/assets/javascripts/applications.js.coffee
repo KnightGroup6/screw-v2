@@ -9,8 +9,8 @@ jQuery ->
 		trade = $('#application_trade_id :selected').text()
 		options = $(jobs).filter("optgroup[label='#{trade}']").html()
 		if options
-			$('#application_job_id').html(options)
+			$('#application_job_id').html(options).parent().show()
 		else
-			$('#application_job_id').empty()
+			$('#application_job_id').empty().parent().hide()
 
 	
