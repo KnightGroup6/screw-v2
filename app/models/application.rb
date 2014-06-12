@@ -20,12 +20,11 @@ class Application < ActiveRecord::Base
 
 	def steps
 		job = Job.find(@job_id)
-		if job.name == "Digital Home Network" #TODO job.name here can be converted
+		if job.name == "Digital Home Network"
 		 %w[digital_Home_Network budget contact]
 		else
 			%w[bathroomInstallation budget contact]
 		end
-		#TODO need to write a method stating if user selects spcific trade_id & job_id display _partial_form as the step.first relating to the selected ids	
 	end
 
 	def next_step
