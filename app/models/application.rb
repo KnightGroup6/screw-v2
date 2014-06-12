@@ -1,6 +1,6 @@
 class Application < ActiveRecord::Base
 	attr_accessible :firstname, :lastname, :phone, :email, :question, :questiona, :questionb, :postcode, :description, :job_id, :trade_id, :budget_id, :jobstartdate_id
-	attr_writer :current_step
+	attr_writer :current_step, :job_id
 
 	belongs_to :job
 	belongs_to :trade
@@ -19,7 +19,12 @@ class Application < ActiveRecord::Base
 	end
 
 	def steps
-		%w[digitalHomeNetwork budget contact]
+		job = Job.find(@job_id)
+		if job.name == "Digital Home Network" #TODO job.name here can be converted
+		 %w[digital_Home_Network budget contact]
+		else
+			%w[bathroomInstallation budget contact]
+		end
 		#TODO need to write a method stating if user selects spcific trade_id & job_id display _partial_form as the step.first relating to the selected ids	
 	end
 

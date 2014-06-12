@@ -15,10 +15,10 @@ class ApplicationsController < ApplicationController
 
   # GET /applications/new
   def new
-    #TODO need to add coding here to accept trade_id & job_id
     session[:application_params] ||= {}
     @application = Application.new(session[:application_params])
     @application.current_step = session[:application_step]
+    @application.job_id = params[:application][:job_id]
   end
 
   # POST /applications
