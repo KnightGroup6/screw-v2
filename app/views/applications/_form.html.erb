@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+  <%= f.hidden_field :job_id, {value: @application.job_id} %>
   <%= render "#{@application.current_step}_step", :f => f %>
 
   <div class="actions">

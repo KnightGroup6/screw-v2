@@ -27,6 +27,7 @@ class ApplicationsController < ApplicationController
     session[:application_params].deep_merge!(params[:application]) if params[:application]
     @application = Application.new(session[:application_params]) 
     @application.current_step = session[:application_step]
+    @application.job_id = params[:application][:job_id]
     if params[:previous_button]
       @application.previous_step
     elsif @application.last_step? 
