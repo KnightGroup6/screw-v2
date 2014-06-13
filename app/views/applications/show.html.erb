@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 
-
-
-
 <h2>Client's Deatils</h2>
 <p>
   <strong>Name:</strong>
@@ -36,7 +33,7 @@
 
 <p>
   <strong>Start Date:</strong>
-  <%= @application.jobstartdate %>
+  <%= @application.jobstartdate.name %>
 </p>
 
 <p>
@@ -46,7 +43,7 @@
 
 <p>
   <strong>Budget:</strong>
-  <%= @application.budget %>
+  <%= @application.budget.name %>
 </p>
 
 <p>
