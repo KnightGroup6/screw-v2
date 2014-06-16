@@ -18,8 +18,8 @@ class Application < ActiveRecord::Base
 		@current_step || steps.first	
 	end
 
-	def transform(s)
-		s.scan(/\w+/).join('_').downcase
+	def transform_job(j)
+		j.scan(/\w+/).join('_').downcase
 	end
 
 	def steps
@@ -48,4 +48,9 @@ class Application < ActiveRecord::Base
 	def last_step?
 		current_step == steps.last	
 	end
+
+	def transform_postcode(p)
+		p.scan(/\w+/).join[0,3]
+	end
+
 end
