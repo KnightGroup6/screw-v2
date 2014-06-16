@@ -22,6 +22,8 @@ class Application < ActiveRecord::Base
 		job = Job.find(@job_id)
 		if job.name == "Digital Home Network"
 		 %w[digital_Home_Network budget contact]
+		elsif job.name == "Sound & Audio Visual Installation"
+			%w[sound_and_audio_visual_installation budget contact]
 		else
 			%w[bathroomInstallation budget contact]
 		end
