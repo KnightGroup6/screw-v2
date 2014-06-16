@@ -18,10 +18,14 @@ class Application < ActiveRecord::Base
 		@current_step || steps.first	
 	end
 
+	def transform(s)
+		s.scan(/\w+/).join('_').downcase
+	end
+
 	def steps
 		job = Job.find(@job_id)
 		if job.name == "Digital Home Network"
-		 %w[digital_Home_Network budget contact]
+		 %w[digital_home_network budget contact]
 		elsif job.name == "Sound & Audio Visual Installation"
 			%w[sound_and_audio_visual_installation budget contact]
 		else
