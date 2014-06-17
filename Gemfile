@@ -9,6 +9,7 @@ gem 'simple_form'
 gem 'ancestry'
 gem 'protected_attributes'
 gem 'wicked'
+gem 'font-awesome-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
