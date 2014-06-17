@@ -8,6 +8,8 @@ class Application < ActiveRecord::Base
 	belongs_to :budget
 	belongs_to :jobstartdate
 
+	belongs_to :User
+
 	# validates :firstname, presence: true
 	# validates :lastname, presence: true
 	# validates :phone, presence: true
