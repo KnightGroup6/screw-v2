@@ -8,7 +8,7 @@ class Application < ActiveRecord::Base
 	belongs_to :budget
 	belongs_to :jobstartdate
 
-	belongs_to :User
+	belongs_to :user
 
 	# validates :firstname, presence: true
 	# validates :lastname, presence: true
