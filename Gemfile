@@ -10,6 +10,7 @@ gem 'ancestry'
 gem 'protected_attributes'
 gem 'wicked'
 gem 'font-awesome-rails'
+gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
