@@ -1,4 +1,5 @@
 class Search < ActiveRecord::Base
+	attr_accessible :keywords, :latitude, :longitude
 
 	# def applications
 	#   @applications ||= find_applications
