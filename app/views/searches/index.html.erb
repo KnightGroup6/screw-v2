@@ -4,6 +4,8 @@
   <thead>
     <tr>
       <th>Keywords</th>
+      <th>latitude</th>
+      <th>longitude</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +14,8 @@
     <% @searches.each do |search| %>
       <tr>
         <td><%= search.keywords %></td>
+        <td><%= search.latitude %></td>
+        <td><%= search.longitude %></td>
         <td><%= link_to 'Show', search %></td>
         <td><%= link_to 'Edit', edit_search_path(search) %></td>
         <td><%= link_to 'Destroy', search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
