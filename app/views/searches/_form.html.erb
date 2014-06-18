@@ -1,4 +1,4 @@
-<%= form_for(@search) do |f| %>
+<%= simple_form_for(@search) do |f| %>
   <% if @search.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@search.errors.count, "error") %> prohibited this search from being saved:</h2>
@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :keywords %><br>
+    <%= f.label :keywords, label: 'Enter postcode' %><br>
     <%= f.text_field :keywords %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "View job leads" %>
   </div>
 <% end %>
