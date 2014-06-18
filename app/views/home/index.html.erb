@@ -11,7 +11,7 @@
     <%= f.grouped_collection_select :job_id, Trade.order(:name), :jobs, :name, :id, :name, prompt: "-- select job type --" %>
   </div>
 
-  <div class="actions"><%= f.submit "Next Step" %></div>
+  <div class="actions"><%= f.submit "Next Step", :name => nil %></div>
 
 <!--   #TODO when user selects trade and job and clicks next step and then clicks back in application new page to return here - the filters do not work -->
 
