@@ -1,5 +1,7 @@
 class Search < ActiveRecord::Base
 	attr_accessible :keywords, :latitude, :longitude
+	geocoded_by :keywords
+	after_validation :geocode
 
 	# def applications
 	#   @applications ||= find_applications
