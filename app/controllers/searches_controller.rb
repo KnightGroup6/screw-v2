@@ -24,7 +24,7 @@ class SearchesController < ApplicationController
   # POST /searches
   # POST /searches.json
   def create
-    @search = Search.new(search_params)
+    @search = Search.new(params[:search]) 
 
     respond_to do |format|
       if @search.save
@@ -40,8 +40,10 @@ class SearchesController < ApplicationController
   # PATCH/PUT /searches/1
   # PATCH/PUT /searches/1.json
   def update
+    @search = Search.find(params[:id])
+
     respond_to do |format|
-      if @search.update(search_params)
+      if @search.update_attributes(params[:search])
         format.html { redirect_to @search, notice: 'Search was successfully updated.' }
         format.json { render :show, status: :ok, location: @search }
       else
