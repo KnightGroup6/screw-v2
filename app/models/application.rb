@@ -3,7 +3,10 @@ class Application < ActiveRecord::Base
 	attr_accessor :current_step, :job_id
 
 	geocoded_by :location
-	after_validation :geocode
+	after_validation :geocode, :if => :address_changed?
+
+	# reverse_geocode_by :latitude, :longitude, :location => :location
+	# after_validation :reverse_geocode
 
 	belongs_to :job
 	belongs_to :trade
