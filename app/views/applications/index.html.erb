@@ -1,5 +1,16 @@
 <h1>Listing applications</h1>
 
+<h1>Connect with new customers today</h1>
+
+<%= form_tag applications_path, :method => :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "View job leads", :name => nil %>
+  </p>
+<% end %>
+
+
+<div>
 <table>
   <thead>
     <tr>
@@ -31,3 +42,4 @@
 <br>
 
 <%= link_to 'New Application', new_application_path %>
+</div>
