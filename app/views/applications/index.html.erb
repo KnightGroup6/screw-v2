@@ -1,16 +1,9 @@
-<h1>Listing applications</h1>
+<div><%= link_to "Looking for a tradesman?", home_index_path %></div>
+<div><%= link_to "Tradesman login", new_user_session_path %></div>
 
-<h1>Connect with new customers today</h1>
+<h1>There were 2,760 job leads last month in Middlesex</h1>
+<h2>Select your trade(s) click all that apply</h2>
 
-<%= form_tag applications_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "View job leads", :name => nil %>
-  </p>
-<% end %>
-
-
-<div>
 <table>
   <thead>
     <tr>
@@ -40,6 +33,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Application', new_application_path %>
-</div>
