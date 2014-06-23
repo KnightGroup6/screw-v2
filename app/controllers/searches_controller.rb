@@ -4,11 +4,7 @@ class SearchesController < ApplicationController
   # GET /searches
   # GET /searches.json
   def index
-    if params[:search].present?
-      @applications = Application.near(params[:search], 50, order: 'distance')
-    else
-      @applications = Application.all
-    end
+    @search = Search.all
   end
 
   # GET /searches/1
