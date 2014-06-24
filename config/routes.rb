@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :applications
 
+  get 'applications/searchresult'
+
   get 'home/index'
 
   resources :trades
