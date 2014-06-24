@@ -11,6 +11,7 @@
 <table>
   <thead>
     <tr>
+      <th>Tick</th>
       <th>Firstname</th>
       <th>Lastname</th>
       <th>Phone</th>
@@ -21,8 +22,10 @@
   </thead>
 
   <tbody>
+
     <% @applications.each do |application| %>
       <tr>
+        <td><%= check_box_tag 'application_ids[]', application.id %></td>
         <td><%= application.firstname %></td>
         <td><%= application.lastname %></td>
         <td><%= application.phone %></td>
