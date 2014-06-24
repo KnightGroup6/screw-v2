@@ -6,7 +6,7 @@ class ApplicationsController < ApplicationController
   # GET /applications.json
   def index
     if params[:search].present?
-      @applications = Application.near(params[:search], 50, order: 'distance')
+      @applications = Application.near(params[:search], 100, order: 'distance')
     else
       @applications = Application.all
     end
