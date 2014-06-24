@@ -8,35 +8,38 @@
 <h1>There were 2,760 job leads last month in Middlesex</h1>
 <h2>Select your trade(s) click all that apply</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Tick</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Postcode</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-
-    <% @applications.each do |application| %>
+<%= form_tag new_search_path, method: :get do %>
+  <table>
+    <thead>
       <tr>
-        <td><%= check_box_tag 'application_ids[]', application.id %></td>
-        <td><%= application.firstname %></td>
-        <td><%= application.lastname %></td>
-        <td><%= application.phone %></td>
-        <td><%= application.email %></td>
-        <td><%= application.location %></td>
-        <td><%= link_to 'Show', application %></td>
-        <td><%= link_to 'Edit', edit_application_path(application) %></td>
-        <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Tick</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Postcode</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    
+    <tbody>
+      <% @applications.each do |application| %>
+        <tr>
+          <td><%= check_box_tag 'application_ids[]', application.id %></td>
+          <td><%= application.firstname %></td>
+          <td><%= application.lastname %></td>
+          <td><%= application.phone %></td>
+          <td><%= application.email %></td>
+          <td><%= application.location %></td>
+          <td><%= link_to 'Show', application %></td>
+          <td><%= link_to 'Edit', edit_application_path(application) %></td>
+          <td><%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><br>
+<div class="actions"><%= submit_tag 'Submit', name: nil %></div>
+<% end %>
+
+
