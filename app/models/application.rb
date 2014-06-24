@@ -1,5 +1,5 @@
 class Application < ActiveRecord::Base
-	attr_accessible :firstname, :lastname, :phone, :email, :question, :questiona, :questionb, :location, :description, :job_id, :trade_id, :budget_id, :jobstartdate_id, :latitude, :longitude, :search
+	attr_accessible :firstname, :lastname, :phone, :email, :question, :questiona, :questionb, :location, :description, :job_id, :trade_id, :budget_id, :jobstartdate_id, :latitude, :longitude, :search, :user_id
 	attr_accessor :current_step, :job_id
 
 	geocoded_by :location
