@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'searchresults/show'
+
   resources :searches
 
   devise_for :users
@@ -7,8 +9,6 @@ Rails.application.routes.draw do
   resources :budgets
 
   resources :applications
-
-  get 'applications/searchresult'
 
   get 'home/index'
 
