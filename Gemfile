@@ -12,6 +12,7 @@ gem 'wicked'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'geocoder'
+gem 'gmaps4rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
