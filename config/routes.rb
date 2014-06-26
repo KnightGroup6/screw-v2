@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'searchresults/show'
-
   resources :searches
 
   devise_for :users
