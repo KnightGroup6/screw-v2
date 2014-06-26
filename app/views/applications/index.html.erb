@@ -8,7 +8,7 @@
 <h1>There were 2,760 job leads last month in Middlesex</h1>
 <h2>Select your trade(s) click all that apply</h2>
 
-<%= form_tag searchresults_show_path, method: :get do %>
+<%= form_tag search_result_applications_path, method: :get do %>
   <table>
     <thead>
       <tr>
@@ -35,7 +35,6 @@
           <td><%= application.email %></td>
           <td><%= application.location %></td>
           <td><%= application.trade.name %></td>
-          
           <td><%= application.job %></td>
           <td><%= link_to 'Show', application %></td>
           <td><%= link_to 'Edit', edit_application_path(application) %></td>
@@ -44,7 +43,7 @@
       <% end %>
     </tbody>
   </table><br>
-<div class="actions"><%= submit_tag 'Submit', name: nil %></div>
+<div><%= submit_tag "View job leads for your trade", name: nil %></div>
 <% end %>
 
 

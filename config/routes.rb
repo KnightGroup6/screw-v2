@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   resources :budgets
 
-  resources :applications
+  resources :applications do
+    collection do
+      get :search_result
+    end
+  end
 
   get 'home/index'
 

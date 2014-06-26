@@ -82,6 +82,10 @@ class ApplicationsController < ApplicationController
     end
   end
 
+  def search_result
+    @applications = Application.find(params[:application_ids])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_application
