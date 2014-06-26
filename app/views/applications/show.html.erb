@@ -39,6 +39,8 @@
   <%= @application.location %> | <strong>Latitude:</strong> <%= @application.latitude %> | <strong>Longitude:</strong><%= @application.longitude %>
 </p>
 
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@application.latitude}%2C#{@application.longitude}" %>
+
 <p>
   <strong>Budget:</strong>
   <%= @application.budget.name %>
