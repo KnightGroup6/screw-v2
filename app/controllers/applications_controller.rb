@@ -10,6 +10,8 @@ class ApplicationsController < ApplicationController
     else
       @applications = Application.all
     end
+
+    @applications_trades = @applications.group_by { |t| t.trade_id }
   end
 
   # GET /applications/1
@@ -87,6 +89,7 @@ class ApplicationsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@applications) do |application, marker|
       marker.lat application.latitude
       marker.lng application.longitude
+      marker.infowindow application.location
     end
   end
 
