@@ -84,6 +84,10 @@ class ApplicationsController < ApplicationController
 
   def search_result
     @applications = Application.find(params[:application_ids])
+    @hash = Gmaps4rails.build_markers(@applications) do |application, marker|
+      marker.lat application.latitude
+      marker.lng application.longitude
+    end
   end
 
   private
