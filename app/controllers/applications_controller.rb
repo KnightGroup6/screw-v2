@@ -94,7 +94,7 @@ class ApplicationsController < ApplicationController
   end
 
   def business_details
-    @applications = Application.find(params[:application_ids])
+    # @applications = Application.find(params[:application_ids])
   end
 
   private
