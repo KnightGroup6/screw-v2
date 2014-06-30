@@ -61,4 +61,8 @@ class Application < ActiveRecord::Base
 		p.scan(/\w+/).join[0,3]
 	end
 
+	def group_trades(trades)
+		trades.group_by{ |s| s[0,4] }
+	end
+
 end
