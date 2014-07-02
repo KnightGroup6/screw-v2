@@ -15,6 +15,7 @@ class Application < ActiveRecord::Base
 	belongs_to :jobstartdate
 
 	belongs_to :user
+	belongs_to :distance
 
 	# validates :firstname, presence: true
 	# validates :lastname, presence: true
