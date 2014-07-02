@@ -146,7 +146,13 @@ s5 = Jobstartdate.create!(name:'2 months+')
 s6 = Jobstartdate.create!(name:'I am flexible on start date')
 
 
-
+Distance.delete_all
+d1 = Distance.create!(name:'5 miles')
+d2 = Distance.create!(name:'10 miles')
+d3 = Distance.create!(name:'20 miles')
+d4 = Distance.create!(name:'30 miles')
+d5 = Distance.create!(name:'50 miles')
+d6 = Distance.create!(name:'50 miles')
 
 
 
