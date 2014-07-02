@@ -155,7 +155,8 @@ d5 = Distance.create!(name:'50 miles')
 d6 = Distance.create!(name:'50 miles')
 
 
-
+# Application.delete_all
+# a1 = Application.create!( firstname: 'richill', lastname: 'tamakloe', phone: '02089587999', email: 'richillgmail.com', job_id: j1.id, trade_id: t1.id, budget_id: b3.id, jobstartdate_id: s3.id)
 
 
 
