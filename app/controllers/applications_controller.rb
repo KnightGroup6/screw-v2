@@ -26,6 +26,7 @@ class ApplicationsController < ApplicationController
     @application = Application.new(session[:application_params])
     @application.current_step = session[:application_step]
     @application.job_id = params[:application][:job_id]
+    @application.trade_id = params[:application][:trade_id]
   end
 
   # POST /applications
@@ -35,6 +36,7 @@ class ApplicationsController < ApplicationController
     @application = Application.new(session[:application_params]) 
     @application.current_step = session[:application_step]
     @application.job_id = params[:application][:job_id]
+    @application.trade_id = params[:application][:trade_id]
     if params[:previous_button]
       @application.previous_step
     elsif @application.last_step? 

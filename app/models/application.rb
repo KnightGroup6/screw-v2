@@ -1,6 +1,6 @@
 class Application < ActiveRecord::Base
 	attr_accessible :firstname, :lastname, :phone, :email, :question, :questiona, :questionb, :location, :description, :job_id, :trade_id, :budget_id, :jobstartdate_id, :latitude, :longitude, :search, :user_id
-	attr_accessor :current_step, :job_id
+	attr_accessor :current_step, :job_id, :trade_id
 
 	geocoded_by :location
 	after_validation :geocode
@@ -32,6 +32,7 @@ class Application < ActiveRecord::Base
 	end
 
 	def steps
+		trade = Trade.find(@trade_id)
 		job = Job.find(@job_id)
 		if job.name == "Digital Home Network"
 		 %w[digital_home_network budget contact]
