@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<ul id="menu">
+	<% Trademanprofilepage.roots.each do |page| %>
+	<li><%= link_to page.name, page %></li>
+	<% end %>
+</ul>
+
 <p>
   <strong>Name:</strong>
   <%= @trademanprofilepage.name %>

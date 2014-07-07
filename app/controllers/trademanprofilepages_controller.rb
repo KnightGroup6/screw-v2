@@ -40,8 +40,10 @@ class TrademanprofilepagesController < ApplicationController
   # PATCH/PUT /trademanprofilepages/1
   # PATCH/PUT /trademanprofilepages/1.json
   def update
+    @trademanprofilepage = Trademanprofilepage.find(params[:id])
+    
     respond_to do |format|
-      if @trademanprofilepage.update(trademanprofilepage_params)
+      if @trademanprofilepage.update_attributes(params[:trademanprofilepage])
         format.html { redirect_to @trademanprofilepage, notice: 'Trademanprofilepage was successfully updated.' }
         format.json { render :show, status: :ok, location: @trademanprofilepage }
       else
@@ -69,6 +71,6 @@ class TrademanprofilepagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def trademanprofilepage_params
-      params.require(:trademanprofilepage).permit(:name, :content, :ancestry)
+      params.require(:trademanprofilepage).permit(:parent_id, :name, :content)
     end
 end
