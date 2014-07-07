@@ -1,0 +1,29 @@
+<h1>Listing trademanprofilepages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Ancestry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trademanprofilepages.each do |trademanprofilepage| %>
+      <tr>
+        <td><%= trademanprofilepage.name %></td>
+        <td><%= trademanprofilepage.content %></td>
+        <td><%= trademanprofilepage.ancestry %></td>
+        <td><%= link_to 'Show', trademanprofilepage %></td>
+        <td><%= link_to 'Edit', edit_trademanprofilepage_path(trademanprofilepage) %></td>
+        <td><%= link_to 'Destroy', trademanprofilepage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trademanprofilepage', new_trademanprofilepage_path %>

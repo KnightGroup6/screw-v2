@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trademanprofilepage.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @trademanprofilepage.content %>
+</p>
+
+<p>
+  <strong>Ancestry:</strong>
+  <%= @trademanprofilepage.ancestry %>
+</p>
+
+<%= link_to 'Edit', edit_trademanprofilepage_path(@trademanprofilepage) %> |
+<%= link_to 'Back', trademanprofilepages_path %>

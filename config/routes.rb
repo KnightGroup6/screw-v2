@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :trademanprofilepages
+
   resources :distances
 
   devise_for :users
