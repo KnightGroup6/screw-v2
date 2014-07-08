@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  resources :trademanprofilepages do
-    collection do
-      get :skills
-    end
-  end
 
   resources :distances
 
@@ -27,14 +22,6 @@ Rails.application.routes.draw do
   resources :jobs
 
   root to: 'home#index', as: 'home'
-
-  # resources :trademanprofile do
-  #   get :jobleads
-  #   get :purchased
-  #   get :memberBenifits
-  #   get :account
-  #   get :editjoblead
-  # end
 
   resource :trademanprofiles do
     get :jobleads
