@@ -1,0 +1,2 @@
+module TrademanprofileHelper
+end

@@ -28,6 +28,15 @@ Rails.application.routes.draw do
 
   root to: 'home#index', as: 'home'
 
+  resources :trademanprofile do
+    collection do
+      get :jobleads
+      get :purchased
+      get :memberBenifits
+      get :account
+    end
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
