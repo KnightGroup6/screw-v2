@@ -29,12 +29,10 @@ Rails.application.routes.draw do
   root to: 'home#index', as: 'home'
 
   resources :trademanprofile do
-    collection do
-      get :jobleads
-      get :purchased
-      get :memberBenifits
-      get :account
-    end
+    get :jobleads
+    get :purchased
+    get :memberBenifits
+    get :account
   end
 
 

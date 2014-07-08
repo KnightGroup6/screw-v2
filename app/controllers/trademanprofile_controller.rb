@@ -1,6 +1,4 @@
 class TrademanprofileController < ApplicationController
-  def index
-  end
 
   def jobleads
   end
