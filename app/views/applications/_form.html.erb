@@ -1,3 +1,5 @@
+<% provide(:title, 'Job Form' ) %>
+
 <%= simple_form_for(@application) do |f| %>
   <% if @application.errors.any? %>
     <div id="error_explanation">
