@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     get :purchased
     get :memberBenifits
     get :account
+    get :editjoblead
   end
 
 

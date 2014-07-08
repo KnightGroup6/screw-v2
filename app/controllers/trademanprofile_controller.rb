@@ -11,4 +11,7 @@ class TrademanprofileController < ApplicationController
  
   def account
   end
+
+  def editjoblead
+  end
 end
