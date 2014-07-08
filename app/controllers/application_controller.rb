@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def after_sign_in_path_for(resource)
-  	home_index_path
+  	# home_index_path
+  	 jobleads_trademanprofiles_path
   end
 end
