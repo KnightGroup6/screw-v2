@@ -11,9 +11,26 @@
 
 <div>
 	<h2>Job Leads</h2>
-	<div><%= link_to 'Edit Job Lead Settings', trademanprofile_editjoblead_path %> </div></br>
-
-
-	<div>List View</div>
-	<div>Map View</div>
+	<div><%= link_to 'Edit Job Lead Settings', trademanprofile_editjoblead_path %> </div>
+	<div class="tabs">
+	    
+	   <div class="tab">
+	       <input type="radio" id="tab-1" name="tab-group-1" checked>
+	       <label for="tab-1">List View</label>
+	       
+	       <div class="content">
+	           stuff1
+	       </div> 
+	   </div>
+	    
+	   <div class="tab">
+	       <input type="radio" id="tab-2" name="tab-group-1">
+	       <label for="tab-2">Map View</label>
+	       
+	       <div class="content">
+	           stuff2
+	       </div> 
+	   </div>
+	    
+	</div>
 </div>
