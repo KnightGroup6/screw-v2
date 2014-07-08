@@ -63,6 +63,10 @@ class TrademanprofilepagesController < ApplicationController
     end
   end
 
+  def sills
+    @trade = Trade.find(params[:id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trademanprofilepage
