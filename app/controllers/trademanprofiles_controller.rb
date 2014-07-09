@@ -19,6 +19,7 @@ class TrademanprofilesController < ApplicationController
         marker.lat application.latitude
         marker.lng application.longitude
         marker.infowindow application.location
+        marker.infowindow application.trade.name
       end
     else
       @applications = Application.all
