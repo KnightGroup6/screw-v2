@@ -7,6 +7,11 @@ class ApplicationsController < ApplicationController
   def index
     if params[:search].present?
       @applications = Application.near(params[:search], 100, order: 'distance')
+      @hash = Gmaps4rails.build_markers(@applications) do |application, marker|
+        marker.lat application.latitude
+        marker.lng application.longitude
+        marker.infowindow application.location
+      end
     else
       @applications = Application.all
     end

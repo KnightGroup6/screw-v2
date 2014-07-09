@@ -1,13 +1,4 @@
 <h2>I am the Tradesman "Area" section</h2>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation"></nav>
 
-
-<%= form_tag applications_path, :method => :get do %>
-  <p>
-  	Show me job leads within 
-  	<%= text_field_tag :search, params[:search] %>
-  	of 
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Create working area", :name => nil %>
-  </p>
-<% end %>
+<%= render '/applications/area' %>
