@@ -4,7 +4,9 @@
 
 <%= form_tag applications_path, :method => :get do %>
   <p>
-  	Show me job leads within --- of 
+  	Show me job leads within 
+  	<%= text_field_tag :search, params[:search] %>
+  	of 
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Create working area", :name => nil %>
   </p>
