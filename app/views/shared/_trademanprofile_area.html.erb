@@ -7,7 +7,9 @@
 
 <%= form_tag editjoblead_trademanprofiles_path, method: :get do %>
   <p>
-  Show me job leads within --- of
+  Show me job leads within
+  <%= select_tag :distance_id, options_from_collection_for_select(Distance.all, :id, :name) %>
+  of
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Create working area", :name => nil %>
   </p>
