@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   root to: 'home#index', as: 'home'
 
   resource :trademanprofiles do
-    get :profile
+    get :show
     get :jobleads
     get :purchased
     get :memberBenifits

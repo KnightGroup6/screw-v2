@@ -1,6 +1,7 @@
 class TrademanprofilesController < ApplicationController
 
-  def profile
+  def show
+    @user = current_user
   end
 
   def jobleads

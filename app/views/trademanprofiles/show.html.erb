@@ -2,9 +2,14 @@
 <h2>Trademan Profile: Profile Page</h2>
 
 <ul>
-	<li><%= link_to 'Profile', profile_trademanprofiles_path %> </li>
+	<li><%= link_to 'Profile', trademanprofiles_path %> </li>
 	<li><%= link_to 'Job Leads', jobleads_trademanprofiles_path %> </li>
 	<li><%= link_to 'Purchased Jobs', purchased_trademanprofiles_path %> </li>
 	<li><%= link_to 'Member Benifits', memberBenifits_trademanprofiles_path %> </li>
 	<li><%= link_to 'Account', account_trademanprofiles_path %> </li>
 </ul>
+
+<p>
+	<b>Name:</b>
+	<%= @user.try(:email) %>
+</p>
