@@ -1,5 +1,8 @@
 class TrademanprofilesController < ApplicationController
 
+  def profile
+  end
+
   def jobleads
   end
 
