@@ -40,8 +40,10 @@ class TrademanrolesController < ApplicationController
   # PATCH/PUT /trademanroles/1
   # PATCH/PUT /trademanroles/1.json
   def update
+     @trademanrole = Trademanrole.find(params[:id])
+
     respond_to do |format|
-      if @trademanrole.update(trademanrole_params)
+      if @trademanrole.update_attributes(params[:trademanrole])
         format.html { redirect_to @trademanrole, notice: 'Trademanrole was successfully updated.' }
         format.json { render :show, status: :ok, location: @trademanrole }
       else
