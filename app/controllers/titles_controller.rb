@@ -40,8 +40,10 @@ class TitlesController < ApplicationController
   # PATCH/PUT /titles/1
   # PATCH/PUT /titles/1.json
   def update
+      @title = Title.find(params[:id])
+
     respond_to do |format|
-      if @title.update(title_params)
+      if @title.update_attributes(params[:trade])
         format.html { redirect_to @title, notice: 'Title was successfully updated.' }
         format.json { render :show, status: :ok, location: @title }
       else

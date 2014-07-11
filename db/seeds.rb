@@ -161,6 +161,15 @@ bt2 = Businesstype.create!(name: 'Limited Company')
 bt3 = Businesstype.create!(name: 'Partnership')
 bt4 = Businesstype.create!(name: 'Limited Liability Partnership')
 
+
+Title.delete_all
+tt1 = Title.create!(name: 'Mr')
+tt2 = Title.create!(name: 'Miss')
+tt3 = Title.create!(name: 'Mrs')
+tt4 = Title.create!(name: 'Ms')
+tt5 = Title.create!(name: 'Dr')
+tt6 = Title.create!(name: 'Prof')
+
 # Application.delete_all
 # a1 = Application.create!( firstname: 'richill', lastname: 'tamakloe', phone: '02089587999', email: 'richillgmail.com', job_id: j1.id, trade_id: t1.id, budget_id: b3.id, jobstartdate_id: s3.id)
 
