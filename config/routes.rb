@@ -1,17 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :employeenumbers
-
-  resources :businesstypes
-
-  resources :trademanroles
-
-  resources :titles
-
-  resources :adverts
-
-  resources :distances
-
   devise_for :users
   resources :jobstartdates
 
@@ -41,6 +29,18 @@ Rails.application.routes.draw do
     get :account
     get :editjoblead
   end
+
+  resources :employeenumbers
+
+  resources :businesstypes
+
+  resources :trademanroles
+
+  resources :titles
+
+  resources :adverts
+
+  resources :distances
 
 
   # The priority is based upon order of creation: first created -> highest priority.

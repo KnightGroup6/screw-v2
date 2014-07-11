@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :applications
   belongs_to :title
   belongs_to :businesstype
-  belngs_to :employeenumber
+  belongs_to :employeenumber
 
 
 
