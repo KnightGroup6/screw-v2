@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :employeenumbers
+
   resources :businesstypes
 
   resources :trademanroles
