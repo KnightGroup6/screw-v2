@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :adverts
+
   resources :distances
 
   devise_for :users
