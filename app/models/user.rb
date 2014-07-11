@@ -7,4 +7,11 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname
 
   has_many :applications
+
+
+
+	def fullname
+		firstname+ " " +lastname
+	end
+
 end
