@@ -40,8 +40,10 @@ class BusinesstypesController < ApplicationController
   # PATCH/PUT /businesstypes/1
   # PATCH/PUT /businesstypes/1.json
   def update
+    @businesstype = Businesstype.find(params[:id])
+
     respond_to do |format|
-      if @businesstype.update(businesstype_params)
+      if @businesstype.update_attributes(params[:businesstype])
         format.html { redirect_to @businesstype, notice: 'Businesstype was successfully updated.' }
         format.json { render :show, status: :ok, location: @businesstype }
       else

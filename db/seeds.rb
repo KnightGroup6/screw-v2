@@ -155,6 +155,12 @@ d5 = Distance.create!(name:'50 miles')
 d6 = Distance.create!(name:'50 miles')
 
 
+Businesstype.delete_all
+bt1 = Businesstype.create!(name: 'Sole Trader')
+bt2 = Businesstype.create!(name: 'Limited Company')
+bt3 = Businesstype.create!(name: 'Partnership')
+bt4 = Businesstype.create!(name: 'Limited Liability Partnership')
+
 # Application.delete_all
 # a1 = Application.create!( firstname: 'richill', lastname: 'tamakloe', phone: '02089587999', email: 'richillgmail.com', job_id: j1.id, trade_id: t1.id, budget_id: b3.id, jobstartdate_id: s3.id)
 
