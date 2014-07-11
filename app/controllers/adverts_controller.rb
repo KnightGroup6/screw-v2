@@ -40,8 +40,10 @@ class AdvertsController < ApplicationController
   # PATCH/PUT /adverts/1
   # PATCH/PUT /adverts/1.json
   def update
+    @advert = Advert.find(params[:id])
+    
     respond_to do |format|
-      if @advert.update(advert_params)
+      if @advert.update_attributes(params[:advert])
         format.html { redirect_to @advert, notice: 'Advert was successfully updated.' }
         format.json { render :show, status: :ok, location: @advert }
       else
