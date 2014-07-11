@@ -1,6 +1,25 @@
 <% provide(:title, 'Profile' ) %>
 <h2>Trademan Profile: Profile Page</h2>
 
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class = "container-fluid">
+    <div class="login">
+    	<% if current_user %>
+    		<%= link_to "log out", destroy_user_session_path, method: :delete %>
+    	<% else %>
+    		<%= link_to "login", new_user_session_path %>
+    		<!-- <div><%= link_to "register", new_user_registration_path %></div> -->
+    	<% end %>
+    </div>
+	<div id="subheader">
+		<% if current_user %>
+			hello <%= current_user.email %>
+		<% else %>
+			you are currently logged out
+		<% end %>
+	</div>
+</nav>
+
 <ul>
 	<li><%= link_to 'Profile', trademanprofiles_path %> </li>
 	<li><%= link_to 'Job Leads', jobleads_trademanprofiles_path %> </li>
