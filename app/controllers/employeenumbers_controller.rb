@@ -40,8 +40,10 @@ class EmployeenumbersController < ApplicationController
   # PATCH/PUT /employeenumbers/1
   # PATCH/PUT /employeenumbers/1.json
   def update
+   @employeenumber = Employeenumber.find(params[:id])
+
     respond_to do |format|
-      if @employeenumber.update(employeenumber_params)
+      if @employeenumber.update_attributes(params[:employeenumber])
         format.html { redirect_to @employeenumber, notice: 'Employeenumber was successfully updated.' }
         format.json { render :show, status: :ok, location: @employeenumber }
       else

@@ -145,7 +145,6 @@ s4 = Jobstartdate.create!(name:'Within 2 months')
 s5 = Jobstartdate.create!(name:'2 months+')
 s6 = Jobstartdate.create!(name:'I am flexible on start date')
 
-
 Distance.delete_all
 d1 = Distance.create!(name:'5 miles')
 d2 = Distance.create!(name:'10 miles')
@@ -153,14 +152,6 @@ d3 = Distance.create!(name:'20 miles')
 d4 = Distance.create!(name:'30 miles')
 d5 = Distance.create!(name:'50 miles')
 d6 = Distance.create!(name:'50 miles')
-
-
-Businesstype.delete_all
-bt1 = Businesstype.create!(name: 'Sole Trader')
-bt2 = Businesstype.create!(name: 'Limited Company')
-bt3 = Businesstype.create!(name: 'Partnership')
-bt4 = Businesstype.create!(name: 'Limited Liability Partnership')
-
 
 Title.delete_all
 tt1 = Title.create!(name: 'Mr')
@@ -170,12 +161,26 @@ tt4 = Title.create!(name: 'Ms')
 tt5 = Title.create!(name: 'Dr')
 tt6 = Title.create!(name: 'Prof')
 
-
 Trademanrole.delete_all
 tr1 = Trademanrole.create!(name: 'I am the sole tradesman')
 tr2 = Trademanrole.create!(name: 'I am a sole tradesman who works with others')
 tr3 = Trademanrole.create!(name: 'I manage subcontractors')
 tr4 = Trademanrole.create!(name: 'I am not a tradesman, but the manager of the Screw Account')
+
+Businesstype.delete_all
+bt1 = Businesstype.create!(name: 'Sole Trader')
+bt2 = Businesstype.create!(name: 'Limited Company')
+bt3 = Businesstype.create!(name: 'Partnership')
+bt4 = Businesstype.create!(name: 'Limited Liability Partnership')
+
+Employeenumber.delete_all
+e1 = Employeenumber.create!(name: 'Just me')
+e2 = Employeenumber.create!(name: '2-5')
+e3 = Employeenumber.create!(name: '6-10')
+e4 = Employeenumber.create!(name: '10+')
+
+
+
 
 
 # Application.delete_all
