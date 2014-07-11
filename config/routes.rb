@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :trademanroles
+
   resources :titles
 
   resources :adverts
