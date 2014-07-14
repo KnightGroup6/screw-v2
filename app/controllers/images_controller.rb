@@ -40,8 +40,10 @@ class ImagesController < ApplicationController
   # PATCH/PUT /images/1
   # PATCH/PUT /images/1.json
   def update
+    @image = Image.find(params[:id])
+
     respond_to do |format|
-      if @image.update(image_params)
+      if @image.update_attributes(params[:image])
         format.html { redirect_to @image, notice: 'Image was successfully updated.' }
         format.json { render :show, status: :ok, location: @image }
       else

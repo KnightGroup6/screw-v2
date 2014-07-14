@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname
 
   has_many :applications
+  has_many :images
   belongs_to :title
   belongs_to :businesstype
   belongs_to :employeenumber
