@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :images
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   resources :jobstartdates
 
   resources :budgets
