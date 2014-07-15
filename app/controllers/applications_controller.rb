@@ -5,6 +5,8 @@ class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
   def index
+    @user = User.new
+    
     if params[:search].present?
       @applications = Application.near(params[:search], 100, order: 'distance')
     else
