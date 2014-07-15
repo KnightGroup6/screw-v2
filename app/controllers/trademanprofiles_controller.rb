@@ -17,6 +17,8 @@ class TrademanprofilesController < ApplicationController
   end
 
   def editjoblead
+    @trades = Trade.order(:name)
+
     if params[:search].present?
       @applications = Application.near(params[:search], 100, order: 'distance')
       @hash = Gmaps4rails.build_markers(@applications) do |application, marker|
