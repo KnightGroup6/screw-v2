@@ -35,11 +35,11 @@ class Application < ActiveRecord::Base
 		trade = Trade.find(@trade_id)
 		job = Job.find(@job_id)
 		if job.name == "Digital Home Network"
-		 	%w[digital_home_network budget contacts]
+		 	%w[digital_home_network budget contact]
 		elsif job.name == "Sound & Audio Visual Installation"
-			%w[sound_and_audio_visual_installation budget contacts]
+			%w[sound_and_audio_visual_installation budget contact]
 		else
-			%w[bathroomInstallation budget contacts]
+			%w[bathroomInstallation budget contact]
 		end
 	end
 
