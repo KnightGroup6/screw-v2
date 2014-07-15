@@ -1,7 +1,4 @@
 <h2>I am the Tradesman "Skills & Trades" section</h2>
-
-
-
 <table>
   <thead>
     <tr>
@@ -12,12 +9,9 @@
 
   <tbody>
     <% @trades.each do |trade| %>
-      <tr>
-        <td><%= trade.name %></td>
-        <td><%= link_to 'Show', trade %></td>
-      </tr>
+    	<%= trade.name %></br>
+    	<%= trade.job_ids %></br></br>
     <% end %>
   </tbody>
 </table>
-
 <br>
