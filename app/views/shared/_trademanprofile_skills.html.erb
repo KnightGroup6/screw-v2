@@ -4,10 +4,13 @@
 <% @trades.each do |trade| %>
   <tr>
     <td>
-        <%= trade.name %></br>
+        <%= trade.name %>
         <ul>
           <% trade.jobs.each do |job| %>
-            <li><%= job.name %></li>
+          <li>
+            <%= check_box_tag "job_ids[]" %>
+            <%= job.name %>
+          </li>
           <% end %>
         </ul>
     </td>
