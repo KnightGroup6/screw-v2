@@ -1,7 +1,8 @@
 class TrademanprofilesController < ApplicationController
 
   def show
-    @user = current_user
+    @users = current_user
+    @images = Image.all
   end
 
   def jobleads
