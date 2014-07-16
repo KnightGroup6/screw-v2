@@ -179,12 +179,40 @@ e2 = Employeenumber.create!(name: '2-5')
 e3 = Employeenumber.create!(name: '6-10')
 e4 = Employeenumber.create!(name: '10+')
 
+Distance.delete_all
+d1 = Distance.create!(name: '5 miles')
+d2 = Distance.create!(name: '10 miles')
+e3 = Distance.create!(name: '20 miles')
+e4 = Distance.create!(name: '30 miles')
+e4 = Distance.create!(name: '40 miles')
+e4 = Distance.create!(name: '50 miles')
 
+# Image.delete_all
+# img1 = Image.create!(image: nil, title: nil, user_id: nil)
+# img2 = Image.create!(image: nil, title: nil, user_id: nil) 
+# img3 = Image.create!(image: nil, title: nil, user_id: nil) 
 
+Advert.delete_all
+ad1 = Advert.create!(image: "insuranceSolution.png", title: "ONE IN TEN OF YOU COULD WIN FREE INSURANCE FOR A YEAR", content: "If you choose One Insurance Solution for your van insurance or public liability insurance then 1 in 10 of you could get free insurance for a year (up to £500 for van insurance and £200 for PL insurance). Call our Rated People hotline on 0845 122 7654 for a great deal today. See terms.", website: "www.oneinsurancesolution.co.uk")
+ad2 = Advert.create!(image: "everline.png", title: "GET £90 CREDITED TO YOUR RATED PEOPLE ACCOUNT FROM EVERLINE", content: "Flexible business loans to help entrepreneurs grow their business, fund their next job, or fill a cash gap whilst awaiting payment from customers. Apply for a short term Everline loan and if your application is successful, your Rated People account will be credited with £90. See terms.", website: "www.oneinsurancesolution.co.uk") 
 
+User.delete_all
+u1 = User.new(firstName: 'richill', lastName: 'tamakloe', email: 'richill@gmail.com', password: 'password', password_confirmation: 'password')
+u1.save! 
+u2 = User.new(firstName: 'ricky', lastName: 'knight', email: 'ricky@gmail.com', password: 'password', password_confirmation: 'password')
+u2.save! 
+u3 = User.new(firstName: 'riyen', lastName: 'knight', email: 'riyen@gmail.com', password: 'password', password_confirmation: 'password')
+u3.save! 
 
 # Application.delete_all
-# a1 = Application.create!( firstname: 'richill', lastname: 'tamakloe', phone: '02089587999', email: 'richillgmail.com', job_id: j1.id, trade_id: t1.id, budget_id: b3.id, jobstartdate_id: s3.id)
+# a1 = Application.create!(firstname: "richill", lastname: "tamakloe", phone: "02089587999", email: "richill@gmail.com", job_id: j1.id, trade_id: t1.id, budget_id: b1.id, jobstartdate_id: s1.id, question: nil, location: "HA8 6NL", description: "fence needs repairing", questiona: nil, questionb: nil, user_id: u1.id) 
+# a2 = Application.create!(firstname: nil, lastname: nil, phone: nil, email: nil, job_id: nil, trade_id: nil, budget_id: nil, jobstartdate_id: nil, question: nil, location: nil, description: nil, questiona: nil, questionb: nil, user_id: nil, latitude: nil, longitude: nil, search: nil, distance_id: nil> 
+# a3 = Application.create!(firstname: nil, lastname: nil, phone: nil, email: nil, job_id: nil, trade_id: nil, budget_id: nil, jobstartdate_id: nil, question: nil, location: nil, description: nil, questiona: nil, questionb: nil, user_id: nil, latitude: nil, longitude: nil, search: nil, distance_id: nil> 
+
+
+
+
+
 
 
 
