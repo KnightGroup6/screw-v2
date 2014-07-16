@@ -1,17 +1,15 @@
 <h2>I am the Tradesman "Skills & Trades" section</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @trades.each do |trade| %>
-    	<%= trade.name %></br>
-    	<%= trade.job_ids %></br></br>
-    <% end %>
-  </tbody>
-</table>
-<br>
+
+<% @trades.each do |trade| %>
+  <tr>
+    <td>
+        <%= trade.name %></br>
+        <ul>
+          <% trade.jobs.each do |job| %>
+            <li><%= job.name %></li>
+          <% end %>
+        </ul>
+    </td>
+  </tr>
+<% end %>
