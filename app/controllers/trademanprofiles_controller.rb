@@ -19,7 +19,6 @@ class TrademanprofilesController < ApplicationController
 
   def editjoblead
     @trades = Trade.order(:name)
-    @jobs = Job.all
 
     if params[:search].present?
       @applications = Application.near(params[:search], 100, order: 'distance')
