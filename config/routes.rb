@@ -23,15 +23,26 @@ Rails.application.routes.draw do
 
   root to: 'home#index', as: 'home'
 
-  resource :trademanprofiles do
-    get :show
-    get :jobleads
-    get :purchased
-    get :memberBenifits
-    get :account
-    get :editjoblead
-  end
+  # resource :trademanprofiles do
+  #   get :show
+  #   get :jobleads
+  #   get :purchased
+  #   get :memberBenifits
+  #   get :account
+  #   get :editjoblead
+  # end
 
+  resources :trademanprofiles do
+    collection do
+      get :show
+      get :jobleads
+      get :purchased
+      get :memberBenifits
+      get :account
+      get :editjoblead
+    end
+  end
+  
   resources :employeenumbers
 
   resources :businesstypes
