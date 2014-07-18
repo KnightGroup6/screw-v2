@@ -9,9 +9,10 @@
           <ul>
             <% trade.jobs.each do |job| %>
             <li>
-              <%= check_box_tag "trade[job_ids][]", job.id, trade.job_ids.include?(job.id), id: dom_id(job)%>
-              <%= label_tag dom_id(job), job.name %>
-              
+              <%= check_box_tag "trade[job_ids][]", job.id %>
+              <%= job.name %>
+              <!-- <div><%= check_box_tag "trade[job_ids][]", job.id, trade.job_ids.include?(job.id), id: dom_id(job)%></div> -->
+              <!-- <div><%= label_tag dom_id(job), job.name %></div> -->
             </li>
             <% end %>
           </ul>
