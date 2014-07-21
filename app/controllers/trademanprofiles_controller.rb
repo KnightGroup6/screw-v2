@@ -33,4 +33,15 @@ class TrademanprofilesController < ApplicationController
     end
     @applications_trades = @applications.group_by { |t| t.trade_id }
   end
+
+  def update_multiple
+    @jobs = Job.find(params[:job_ids])
+    @jobs = Job.update(params[:jobs], params[:jobs])
+    # @jobs.reject! { |j| j.errors.empty? }
+    # if @jobs.empty?
+    #   redirect_to editjoblead_trademanprofiles_url
+    # else
+    #   render "edit_multiple"
+    # end
+  end
 end

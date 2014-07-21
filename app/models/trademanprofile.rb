@@ -1,3 +1,3 @@
 class Trademanprofile < ActiveRecord::Base
-	attr_accessible :name
+	attr_accessible :save
 end

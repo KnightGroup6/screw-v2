@@ -40,9 +40,10 @@ Rails.application.routes.draw do
       get :memberBenifits
       get :account
       get :editjoblead
+      put :update_multiple
     end
   end
-  
+
   resources :employeenumbers
 
   resources :businesstypes
