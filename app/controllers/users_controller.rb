@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
 	def profile
-		@user = current_user.fullname
+		@user = current_user
 	end
 
 	# def create
