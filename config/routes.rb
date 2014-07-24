@@ -34,7 +34,7 @@ Rails.application.routes.draw do
 
   resources :trademanprofiles do
     collection do
-      get :profile
+      get :show
       get :jobleads
       get :purchased
       get :memberBenifits

@@ -1,6 +1,6 @@
 class TrademanprofilesController < ApplicationController
 
-  def profile
+  def show
     @users = current_user
     @images = Image.all
   end
